@@ -10,9 +10,9 @@ refreshOptions()
 function refreshOptions()
 {
     if (x < 25)
-        document.getElementById(“ovenBtn”).disabled = true;
+        document.getElementById("ovenBtn").disabled = true;
     else
-        document.getElementById(“ovenBtn”).disabled = false;
+        document.getElementById("ovenBtn").disabled = false;
 }
 
 function achat() {

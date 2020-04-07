@@ -1,7 +1,15 @@
-let x;
-x = 0;
-x = x + 1;
+let x=0;
+let y=1;
 function clicker() {
-  x = x + 1;
+  x = x + y;
+document.getElementById("demo").innerHTML = x;
+}
+
+
+function achat() {
+if (x >= 25) {
+  x = x - 25;
+  y = y + 1;
+}
 document.getElementById("demo").innerHTML = x;
 }

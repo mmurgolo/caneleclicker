@@ -7,7 +7,7 @@ let foury=0;
 let fouryp=1000000;
 let fourxvalue=40;
 let fouryvalue=10000;
-let m=0;
+let m=1000;
 let mc=0;
 
 function clicker() {
@@ -32,22 +32,34 @@ function clicker() {
 
 function refreshOptions()
 {
-    if (x < p)
+    if (x < p) {
         document.getElementById("ovenBtn").disabled = true;
-    else
+    }
+    else {
         document.getElementById("ovenBtn").disabled = false;
-    if (x < fourxp)
+    }
+    if (x < fourxp){
         document.getElementById("ovenBtnx").disabled = true;
-    else
+    }
+    else {
         document.getElementById("ovenBtnx").disabled = false;
-    if (x < fouryp)
+    }
+    if (x < fouryp) {
         document.getElementById("ovenBtny").disabled = true;
-    else
+      }
+    else {
         document.getElementById("ovenBtny").disabled = false;
-    if (x >= 10000000)
-        document.getElementById("mission1").innerHTML = "Mission finie, vendez tout. Vous venez d'obtenir le maitre du canelées";
-        document.getElementById("mission1m").innerHTML = m;
+      }
+    if (x >= 1) {
+        document.getElementById("mission1").innerHTML = "Mission finie. Vous venez d'obtenir le maitre du canelées. Un fournisseur vous a offert des emporte-pièces !";
         mc = mc + 1;
+        document.getElementById("chap2").style.display = "block";
+        document.getElementById("brede").style.display = "block";
+        document.getElementById("moral").style.display = "block";
+        document.getElementById("emp").style.display = "block";
+        document.getElementById("craft").style.display = "block";
+        document.getElementById("mor").style.display = "block";
+      }
 }
 
 function achat() {
@@ -121,26 +133,35 @@ refreshOptions()
 document.getElementById("fouryp").innerHTML = fouryp;
 refreshOptions()
 }
+/* Mise en place du second chapitre */
 
-function vendre() {
-  if (x >= 10) {
-  m = m + (x/10);
-  x = 0;
+
+
+/* Initialisation des variables */
+let bred=0;
+let moral=1;
+
+function bredele() {
+  if (m>0) {
+bred = bred + 1;
+m = m - (10/moral);
+RefreshMoral()
+document.getElementById("nbbredele").innerHTML = bred;
+document.getElementById("mission1m").innerHTML = m;
 }
-document.getElementById("four").innerHTML = y;
-refreshOptions()
-document.getElementById("demo").innerHTML = x;
-refreshOptions()
-document.getElementById("price").innerHTML = p;
-refreshOptions()
-document.getElementById("fourx").innerHTML = fourx;
-refreshOptions()
-document.getElementById("foury").innerHTML = foury;
-refreshOptions()
-document.getElementById("clic").innerHTML = y + fourxvalue*fourx + fouryvalue*foury;
-refreshOptions()
-document.getElementById("fourxp").innerHTML = fourxp;
-refreshOptions()
-document.getElementById("fouryp").innerHTML = fouryp;
-refreshOptions()
 }
+
+/* function moral() {
+bred = bred - 10;
+moral = moral + 1;
+}
+*/
+
+function RefreshMoral() { 
+  if (moral<10) {
+    document.getElementById("moral").disabled = true;
+  }
+  if (bred<10){
+    document.getElementById("moral").disabled = true;
+  }
+} 

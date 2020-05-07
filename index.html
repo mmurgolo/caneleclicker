@@ -16,27 +16,32 @@
 <h1>Canele Clicker</h1>
 <p></p>
 <br>
+<span id="mission1">
 <p>Bonjour peuple, nous sommes confinés, les bars, restaurants, cafés sont fermés. Et vous êtes le seul en mesure de faire des cannelées pour sauver le pays du COVID-19.</p>
 <p>Votre mission est de faire 10 millions de cannelées.</p>
-<p>Le jeu se déroule en chapitre, une fois la première mission finie, scroller pour continuer l'histoire.</p>
+<p>Le jeu se déroule en chapitre, une fois la première mission finie, le prochain chapitre s'affichera.</p>
 <p>Vous avez <span style="color:#a47" id="demo">0</span> canelée(s)</p>
 <input type="button" onclick="clicker()" value="Cuisiner">
 <input type="button" onclick="achat()" value="Acheter un four classique" disabled="true" id="ovenBtn">
 <input type="button" onclick="achatx()" value="Acheter un four rare" disabled="true" id="ovenBtnx">
 <input type="button" onclick="achaty()" value="Acheter un four épique" disabled="true" id="ovenBtny">
-<input type="button" onclick="vendre()" value="Vendre tout" id="btn">
 <p>Votre prochain clic vous rapportera <span style="color:#a47" id="clic">1</span> canelées.</p>
 <p>Vous avez <span style="color:#a47" id="four">1</span> four(s) classique(s). (<span style="color:#a47" id="price">25</span>)</p>
 <p>Vous avez <span style="color:#a47" id="fourx">0</span> four(s) rare(s). (<span style="color:#a47" id="fourxp">400</span>)</p>
 <p>Vous avez <span style="color:#a47" id="foury">0</span> four(s) épique(s). (<span style="color:#a47" id="fouryp">1000000</span>)</p>
-<span style="color:#a47" id="mission1"></span>
+</span>
 <p>-------------------</p>
-<p>Vous avez obtenu <span style="color:#a47" id="mission1m">0</span> emporte-pièces.</p>
-<p>Décembre 2020, les gens sont restés confinés. Le moral est à 0. Le seul espoir qu'il reste est de faire les bredelés à l'aide des emporte-pièces que vous avez récupérés.</p>
-<p>En craftant 1 brédélé, vous obtenez des points de moral pour vos apprentis qui travailleront plus vite. Les brédélés ne sont pas vendables, on fait ça pour le sourire des gens après tout ^^.</p>
-<p>En faisant assez de brédélés, vous pouvez même nommer une personne de votre personnel MAITRE DU BREDELES, celui-ci ira plus vite dans le craft de cet item dans la suite des chapitres.</p>
-
-
-
+<p id="emp" style="display:none;">Vous avez obtenu <span style="color:#a47" id="mission1m">1000</span> emporte-pièces.</p>
+<p id="chap2" style="display:none;">Décembre 2020, les gens sont restés confinés. Le moral est à 0. Le seul espoir qu'il reste est de faire les bredelés à l'aide des emporte-pièces que vous avez récupérés.
+<br>
+En craftant 1 brédélé, vous obtenez des points de moral pour vos apprentis qui travailleront plus vite. Les brédélés ne sont pas vendables, on fait ça pour le sourire des gens après tout ^^.
+<br>
+En faisant assez de brédélés, vous pouvez même nommer une personne de votre personnel MAITRE DU BREDELES, celui-ci ira plus vite dans le craft de cet item dans la suite des chapitres.
+<br>
+Le moral vous permet de payer moins cher la production de brédélés.</p>
+<input type="button" onclick="bredele()" value="Craft bredélé(s)" id="brede" style="display:none;">
+<input type="button" onclick="moral()" value="Ajouter des points de moral" disabled="true" id="moral" style="display:none;">
+<p id="craft" style="display:none;">Vous avez craftés <span style="color:#a47" id="nbbredele">0</span> bredélé(s)</p>
+<p id="mor" style="display:none;">Vous avez placés <span style="color:#a47" id="nbmoral">1</span> point(s) de moral.</p>
 </body>
 </html>
